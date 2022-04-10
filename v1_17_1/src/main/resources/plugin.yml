@@ -1,0 +1,18 @@
+name: DP-Lotto
+version: 1.0.0.0
+main: com.darksoldier1404.dlt.Lotto
+api-version: 1.17
+authors: [ DEAD_POOLIO_ ]
+depend:
+  - DPP-Core
+commands:
+  로또:
+    permission: dlt.buy
+    usage: /로또 구매
+    aliases: [ dlt ]
+    description: 로또를 구매하거나 조회합니다.
+  dlta:
+    permission: dlt.admin
+    usage: /dlta
+    aliases: [ dltadmin ]
+    description: 로또 관리자 명령어 입니다.

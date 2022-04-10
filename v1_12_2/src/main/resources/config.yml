@@ -1,0 +1,50 @@
+Settings:
+  prefix: "&f[ &e로또 6/45 &f] "
+
+  buy_price: 5000
+  max_buyGame_per_round: 10
+
+  1th_price: 2100000000
+  2th_price: 70000000
+  3th_price: 10000000
+  4th_price: 500000
+  5th_price: 50000
+
+  enableCountDown: true
+  CountDown:
+    - "10초!"
+    - "<delay:1>"
+    - "9초!"
+    - "<delay:1>"
+    - "8초!"
+    - "<delay:1>"
+    - "7초!"
+    - "<delay:1>"
+    - "6초!"
+    - "<delay:1>"
+    - "5초!"
+    - "<delay:1>"
+    - "4초!"
+    - "<delay:1>"
+    - "3초!"
+    - "<delay:1>"
+    - "2초!"
+    - "<delay:1>"
+    - "1초!"
+    - "<delay:1>"
+
+  # 매일 로또 추첨 시작 시간
+  # F = Fixed (고정 시간)
+  # P = Periodic (주기적인 시간, 생성된 또는 활성화한 시점부터)
+  # [ 시간 설정 - Fixed ]
+  # 00:00 = 자정
+  # 12:00 = 점심
+  # 22:00 = 오후 10시
+  # [ 시간 설정 - Periodic ]
+  # 03:00 = 3시간 마다
+  # 12:00 = 12시간 마다
+  Type: "F"
+  LotteryTime: "20:45"
+  Enabled: true
+
+  Lotto:
