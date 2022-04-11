@@ -252,6 +252,10 @@ public class DLTFunction {
     public static void buyLotto(Player p, String sint) {
         try {
             int i = Integer.parseInt(sint);
+            if(i <= 0) {
+                p.sendMessage(data.getPrefix() + "옳바를 숫자를 입력해주세요.");
+                return;
+            }
             if (MoneyAPI.hasEnoughMoney(p, data.getConfig().getDouble("Settings.buyPrice"))) {
                 if (data.getUserData(p.getUniqueId()).getConfigurationSection("Lotto") == null) {
                     List<String> list = new ArrayList<>();
