@@ -214,7 +214,7 @@ public class DLTFunction {
     }
 
     public static void buyLotto(Player p) {
-        if (MoneyAPI.hasEnoughMoney(p, data.getConfig().getDouble("Settings.buyPrice"))) {
+        if (MoneyAPI.hasEnoughMoney(p, data.getConfig().getDouble("Settings.buy_price"))) {
             if (data.getUserData(p.getUniqueId()).getConfigurationSection("Lotto") == null) {
                 List<String> list = new ArrayList<>();
                 if (list.size() >= data.getConfig().getInt("Settings.max_buyGame_per_round")) {
@@ -241,7 +241,7 @@ public class DLTFunction {
                 list.add(getLotto());
                 data.getUserData(p.getUniqueId()).set("Lotto." + i + ".numbers", list);
             }
-            MoneyAPI.takeMoney(p, data.getConfig().getDouble("Settings.buyPrice"));
+            MoneyAPI.takeMoney(p, data.getConfig().getDouble("Settings.buy_price"));
             p.sendMessage(data.getPrefix() + "로또를 구매하였습니다.");
             return;
         } else {
@@ -256,7 +256,7 @@ public class DLTFunction {
                 p.sendMessage(data.getPrefix() + "옳바를 숫자를 입력해주세요.");
                 return;
             }
-            if (MoneyAPI.hasEnoughMoney(p, data.getConfig().getDouble("Settings.buyPrice"))) {
+            if (MoneyAPI.hasEnoughMoney(p, data.getConfig().getDouble("Settings.buy_price"))) {
                 if (data.getUserData(p.getUniqueId()).getConfigurationSection("Lotto") == null) {
                     List<String> list = new ArrayList<>();
                     if (list.size() + i >= data.getConfig().getInt("Settings.max_buyGame_per_round")) {
@@ -301,7 +301,7 @@ public class DLTFunction {
                 return;
             }
         }
-        if (MoneyAPI.hasEnoughMoney(p, data.getConfig().getDouble("Settings.buyPrice"))) {
+        if (MoneyAPI.hasEnoughMoney(p, data.getConfig().getDouble("Settings.buy_price"))) {
             if (data.getUserData(p.getUniqueId()).getConfigurationSection("Lotto") == null) {
                 List<String> list = new ArrayList<>();
                 if (list.size() >= data.getConfig().getInt("Settings.max_buyGame_per_round")) {
@@ -328,7 +328,7 @@ public class DLTFunction {
                 list.add(args.stream().collect(Collectors.joining(", ")));
                 data.getUserData(p.getUniqueId()).set("Lotto." + i + ".numbers", list);
             }
-            MoneyAPI.takeMoney(p, data.getConfig().getDouble("Settings.buyPrice"));
+            MoneyAPI.takeMoney(p, data.getConfig().getDouble("Settings.buy_price"));
             p.sendMessage(data.getPrefix() + "로또를 구매하였습니다.");
             return;
         } else {
