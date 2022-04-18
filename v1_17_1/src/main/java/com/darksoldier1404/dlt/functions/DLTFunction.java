@@ -168,31 +168,35 @@ public class DLTFunction {
                 p.sendMessage(data.getPrefix() + "축하합니다. 당신은 1등입니다! : " + r);
                 if (!data.getUserData(p.getUniqueId()).getBoolean("Lotto." + i + ".accept")) {
                     p.sendMessage(data.getPrefix() + "당첨금 : " + data.getConfig().getInt("Settings.1th_price") + "원을 수령했습니다.");
+                    MoneyAPI.addMoney(p, BigDecimal.valueOf(data.getConfig().getLong("Settings.1th_price")));
                 }
             } else if (count == 5) {
                 p.sendMessage(data.getPrefix() + "로또" + i + "회차에서 5개의 번호가 맞았습니다.");
                 p.sendMessage(data.getPrefix() + "축하합니다. 당신은 2등입니다! : " + r);
                 if (!data.getUserData(p.getUniqueId()).getBoolean("Lotto." + i + ".accept")) {
                     p.sendMessage(data.getPrefix() + "당첨금 : " + data.getConfig().getInt("Settings.2th_price") + "원을 수령했습니다.");
+                    MoneyAPI.addMoney(p, BigDecimal.valueOf(data.getConfig().getLong("Settings.2th_price")));
                 }
             } else if (count == 4) {
                 p.sendMessage(data.getPrefix() + "로또" + i + "회차에서 4개의 번호가 맞았습니다.");
                 p.sendMessage(data.getPrefix() + "축하합니다. 당신은 3등입니다! : " + r);
                 if (!data.getUserData(p.getUniqueId()).getBoolean("Lotto." + i + ".accept")) {
                     p.sendMessage(data.getPrefix() + "당첨금 : " + data.getConfig().getInt("Settings.3th_price") + "원을 수령했습니다.");
-
+                    MoneyAPI.addMoney(p, BigDecimal.valueOf(data.getConfig().getLong("Settings.3th_price")));
                 }
             } else if (count == 3) {
                 p.sendMessage(data.getPrefix() + "로또" + i + "회차에서 3개의 번호가 맞았습니다.");
                 p.sendMessage(data.getPrefix() + "축하합니다. 당신은 4등입니다! : " + r);
                 if (!data.getUserData(p.getUniqueId()).getBoolean("Lotto." + i + ".accept")) {
                     p.sendMessage(data.getPrefix() + "당첨금 : " + data.getConfig().getInt("Settings.4th_price") + "원을 수령했습니다.");
+                    MoneyAPI.addMoney(p, BigDecimal.valueOf(data.getConfig().getLong("Settings.4th_price")));
                 }
             } else if (count == 2) {
                 p.sendMessage(data.getPrefix() + "로또" + i + "회차에서 2개의 번호가 맞았습니다.");
                 p.sendMessage(data.getPrefix() + "축하합니다. 당신은 5등입니다! : " + r);
                 if (!data.getUserData(p.getUniqueId()).getBoolean("Lotto." + i + ".accept")) {
                     p.sendMessage(data.getPrefix() + "당첨금 : " + data.getConfig().getInt("Settings.5th_price") + "원을 수령했습니다.");
+                    MoneyAPI.addMoney(p, BigDecimal.valueOf(data.getConfig().getLong("Settings.5th_price")));
                 }
             } else {
                 p.sendMessage(data.getPrefix() + "아쉽지만 꽝입니다. : " + r);
