@@ -6,7 +6,7 @@ authors: [ DEAD_POOLIO_ ]
 depend:
   - DPP-Core
 commands:
-  濡쒕삉:
+  로또:
     permission: dlt.buy
     aliases: [ dlt ]
     description: 로또를 구매하거나 조회합니다.
