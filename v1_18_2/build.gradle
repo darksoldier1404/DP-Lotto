@@ -7,7 +7,7 @@ group 'com.darksoldier1404'
 version = '1.0.0.3'
 
 configurations {
-    jar.archiveName = name + '-_v1_18_2-' + version + '.jar'
+    jar.archiveName = rootProject.name + '-_' + name + '-' + version + '.jar'
 }
 publishing {
     publications {
